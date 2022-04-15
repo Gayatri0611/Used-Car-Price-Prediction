@@ -40,6 +40,6 @@ if st.button('Predict Price'):
     # query
     query = np.array([year,manufacturer,condition,cylinders,fuel,odometer,transmission,drive,size,type,paint_color])
 
-    query = query.reshape(1,19)
+    query = query.reshape(1,11)
     #st.title("The predicted price of this configuration is " + str((np.exp(pipe.predict(query)[0]))))
     st.title("The Predicted Price of CAR is "+str(int(pipe.predict(query)[0]))+"$")
